@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* ========================================
+Table of Contents
+===========================================
+
+* 1. ROOT VARIABLES
+* 2. RESET
+* 3. GENERAL
+* 4. CONTENT
+* 5. FOOTER
+* 6. MEDIA QUERIES
+
+===========================================
+======================================== */
+
+/* ====================[1]==================== */
+/* ===== ROOT VARIABLES ===== */
+
+:root {
+
+    /* COLORS */
+    --clr-blue-100: hsl(212, 45%, 89%);
+    --clr-blue-300: hsl(220, 15%, 55%);
+    --clr-blue-600: hsl(218, 44%, 22%);
+
+    /* FONT SIZE */
+    --fs-reg: 15px;
+
+    /* FONT WEIGHT */
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    /* FONT FAMILY */
+    --ff-main: 'Outfit', sans-serif;
+}
+
+/* ====================[2]==================== */
+/* ===== RESET ===== */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* ====================[3]==================== */
+/* ===== GENERAL ===== */
+body {
+    margin: 1.5rem;
+    background: var(--clr-blue-100);
+    color: var(--clr-blue-300);
+    font-size: var(--fs-reg);
+    font-family: var(--ff-main);
+    text-align: center;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+
+/* ====================[4]==================== */
+/* ===== MAIN CONTENT ===== */
+
+.cta {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 1.25rem;
+    max-width: 21.25em;
+    box-shadow: 0 1.75rem 2rem hsl(220deg 15% 55% / 0.2);
+}
+
+/* QR CODE IMG */
+
+img {
+    border-radius: 0.5rem;
+    max-width: 19.25em;
+}
+
+/* TEXT CONTAINER */
+
+.content {
+    margin: 1.5rem 0;
+}
+
+h1 {
+    color: var(--clr-blue-600);
+}
+
+p {
+    margin-top: 1rem;
+}
+
+/* ====================[5]==================== */
+/* ===== FOOTER ===== */
+
+.attribution {
+    font-size: 11px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+.attribution a { color: hsl(228, 100%, 58%); }
+
+.attribution a:hover {
+    text-decoration: none;
+}
+
+/* ====================[6]==================== */
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 22.5em) {
+    img {
+        width: 100%;
+    }
+
+    .cta {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 57.1875em) and (orientation: landscape) {
+    body {
+        display: block;
+    }
+
+    .cta {
+        padding: 1rem;
+        flex-direction: row;
+        max-width: 40.25em;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width:15.25em;
+    }
+
+    .content {
+        margin: 0 0 0 1rem;
+    }
+
+    .attribution {
+        margin-bottom: 0.5rem;
+    }
+}
